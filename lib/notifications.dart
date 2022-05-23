@@ -47,42 +47,70 @@ class _NotificationsState extends State<Notifications> {
             ]),
           ),
           SizedBox(height: 25),
-          Container(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              physics: BouncingScrollPhysics(),
-              child: Column(children: [
-                tagbox(
-                  picName: "assets/images/musicevent.jpg",
-                  date: '29th Nov, 2020 12 PM',
-                  title: 'Flutter GetX Event',
-                  place: 'New Delhi ,IN 38520',
-                ),
-                tagbox(
-                  picName: "assets/images/musicevent.jpg",
-                  date: '29th Nov, 2020 12 PM',
-                  title: 'Flutter GetX Event',
-                  place: 'New Delhi ,IN 38520',
-                ),
-                tagbox(
-                  picName: "assets/images/musicevent.jpg",
-                  date: '29th Nov, 2020 12 PM',
-                  title: 'Flutter GetX Event',
-                  place: 'New Delhi,IN 38520',
-                ),
-                tagbox(
-                  picName: "assets/images/musicevent.jpg",
-                  date: '29th Nov, 2020 12 PM',
-                  title: 'Flutter GetX Event',
-                  place: 'New Delhi ,IN 38520',
-                ),
-                tagbox(
-                  picName: "assets/images/musicevent.jpg",
-                  date: '29th Nov, 2020 12 PM',
-                  title: 'Flutter GetX Event',
-                  place: 'New Delhi ,IN 38520',
-                ),
-              ]),
+          Expanded(
+            child: Container(
+              // height: 700,
+              // color: Colors.red,
+              child: SingleChildScrollView(
+                // scrollDirection: Axis.vertical,
+                physics: BouncingScrollPhysics(),
+                child: Column(children: [
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi ,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi ,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi ,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi ,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi ,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi ,IN 38520',
+                  ),
+                  tagbox(
+                    picName: "assets/images/musicevent.jpg",
+                    date: '29th Nov, 2020 12 PM',
+                    title: 'Flutter GetX Event',
+                    place: 'New Delhi ,IN 38520',
+                  ),
+                ]),
+              ),
             ),
           ),
         ]),
@@ -96,7 +124,7 @@ class _NotificationsState extends State<Notifications> {
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 170),
+            // margin: EdgeInsets.only(bottom: 100),
             height: 100,
             child: Image.asset('assets/images/musicevent.jpg'),
             clipBehavior: Clip.hardEdge,
@@ -104,9 +132,9 @@ class _NotificationsState extends State<Notifications> {
               borderRadius: BorderRadius.circular(20),
             ),
           ),
-          SizedBox(width: 20),
+          SizedBox(width: 10),
           Container(
-            margin: EdgeInsets.only(bottom: 160),
+            // margin: EdgeInsets.only(bottom: 160),
             child: Column(children: [
               Container(
                 margin: EdgeInsets.only(right: 80),

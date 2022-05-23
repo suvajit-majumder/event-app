@@ -3,6 +3,7 @@ import 'package:event_app/eventdetails.dart';
 import 'package:event_app/filter.dart';
 import 'package:event_app/myevents.dart';
 import 'package:event_app/notifications.dart';
+import 'package:event_app/pastevent.dart';
 import 'package:event_app/settings.dart';
 import 'package:flutter/material.dart';
 
@@ -81,7 +82,13 @@ class _HomepageState extends State<Homepage> {
               },
               child: drawerCard(icon: Icons.calendar_month, name: "My Event"),
             ),
-            drawerCard(icon: Icons.calendar_month, name: "Past Event"),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => Pastevent())));
+              },
+              child: drawerCard(icon: Icons.calendar_month, name: "Past Event"),
+            ),
             drawerCard(icon: Icons.feedback, name: "Feedback"),
             GestureDetector(
               onTap: () {

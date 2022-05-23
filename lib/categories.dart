@@ -1,3 +1,4 @@
+import 'package:event_app/components/app_bar.dart';
 import 'package:flutter/material.dart';
 import 'homepage.dart';
 
@@ -18,35 +19,7 @@ class _categoriesState extends State<categories> {
         ),
         color: Colors.white,
         child: Column(children: [
-          Container(
-            margin: EdgeInsets.only(top: 60, left: 10),
-            child: Row(children: [
-              Container(
-                height: 45,
-                width: 45,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Colors.indigo),
-                child: GestureDetector(
-                    child: Icon(
-                      Icons.arrow_back,
-                      size: 35,
-                      color: Colors.white,
-                    ),
-                    onTap: () {
-                      Navigator.pop(context);
-                    }),
-              ),
-              SizedBox(width: 19),
-              Container(
-                child: Text(
-                  'Categories',
-                  style: TextStyle(
-                      fontFamily: 'Visby', fontSize: 26, color: Colors.indigo),
-                ),
-              ),
-            ]),
-          ),
+          MyAppBar(title: 'Categories'),
           SizedBox(height: 35),
           Container(
             child: Row(children: [

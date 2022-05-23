@@ -1,4 +1,6 @@
 import 'package:event_app/categories.dart';
+import 'package:event_app/login.dart';
+import 'package:event_app/verifyotp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_xlider/flutter_xlider.dart';
 
@@ -236,33 +238,45 @@ class _FilterState extends State<Filter> {
             ),
           ),
           SizedBox(height: 45),
-          Container(
-            margin: EdgeInsets.only(right: 20),
-            padding: EdgeInsets.symmetric(horizontal: 65, vertical: 15),
-            height: 60,
-            width: 190,
-            child: Text('Apply',
-                style: TextStyle(
-                    fontFamily: 'Visby', fontSize: 14, color: Colors.white)),
-            decoration: BoxDecoration(
-              color: Colors.indigo,
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(width: 3, color: Colors.indigo),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: ((context) => Login())));
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 20),
+              padding: EdgeInsets.symmetric(horizontal: 65, vertical: 15),
+              height: 60,
+              width: 190,
+              child: Text('Apply',
+                  style: TextStyle(
+                      fontFamily: 'Visby', fontSize: 14, color: Colors.white)),
+              decoration: BoxDecoration(
+                color: Colors.indigo,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(width: 3, color: Colors.indigo),
+              ),
             ),
           ),
           SizedBox(height: 20),
-          Container(
-            margin: EdgeInsets.only(right: 20),
-            padding: EdgeInsets.symmetric(horizontal: 65, vertical: 15),
-            height: 60,
-            width: 190,
-            child: Text('Clear',
-                style: TextStyle(
-                    fontFamily: 'Visby', fontSize: 14, color: Colors.white)),
-            decoration: BoxDecoration(
-              color: Colors.indigo,
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(width: 3, color: Colors.indigo),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: ((context) => Verifyotp())));
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 20),
+              padding: EdgeInsets.symmetric(horizontal: 65, vertical: 15),
+              height: 60,
+              width: 190,
+              child: Text('Clear',
+                  style: TextStyle(
+                      fontFamily: 'Visby', fontSize: 14, color: Colors.white)),
+              decoration: BoxDecoration(
+                color: Colors.indigo,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(width: 3, color: Colors.indigo),
+              ),
             ),
           ),
         ]),

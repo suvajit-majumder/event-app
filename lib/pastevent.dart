@@ -1,15 +1,15 @@
-import 'package:event_app/components/app_bar.dart';
-import 'package:event_app/main.dart';
 import 'package:flutter/material.dart';
 
-class Myevents extends StatefulWidget {
-  const Myevents({Key key}) : super(key: key);
+import 'components/app_bar.dart';
+
+class Pastevent extends StatefulWidget {
+  const Pastevent({Key key}) : super(key: key);
 
   @override
-  State<Myevents> createState() => _MyeventsState();
+  State<Pastevent> createState() => _PasteventState();
 }
 
-class _MyeventsState extends State<Myevents> {
+class _PasteventState extends State<Pastevent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _MyeventsState extends State<Myevents> {
         padding: EdgeInsets.symmetric(horizontal: 30),
         child: Column(children: [
           MyAppBar(
-            title: "My Events",
+            title: "Past Events",
           ),
           SizedBox(height: 20),
           Expanded(
@@ -26,33 +26,33 @@ class _MyeventsState extends State<Myevents> {
                 scrollDirection: Axis.vertical,
                 physics: BouncingScrollPhysics(),
                 child: Column(children: [
-                  event(
+                  pastevent(
                       picName: "assets/images/eventImage.jpg",
                       date: '29 th Nov 2020 12 pm',
                       title: 'Flutter Conference , Dart Analysis',
                       place: 'New York ,US 10010',
-                      price: '500'),
+                      feedback: 'Feedback'),
                   SizedBox(height: 30),
-                  event(
+                  pastevent(
                       picName: "assets/images/eventimage1.jpg",
                       date: '29th Nov 2020 12 pm',
                       title: 'Flutter Conference , Dart Analysis',
                       place: 'New York ,US 10010',
-                      price: '900'),
+                      feedback: 'Feedback'),
                   SizedBox(height: 30),
-                  event(
+                  pastevent(
                       picName: "assets/images/eventImage.jpg",
                       date: '29th Nov, 2020 12 PM',
                       title: 'Flutter Conference , Dart Analysis',
                       place: 'New York ,US 10010',
-                      price: '500'),
+                      feedback: 'Feedback'),
                   SizedBox(height: 30),
-                  event(
+                  pastevent(
                     picName: "assets/images/eventimage1.jpg",
                     date: '29th NOv, 2020 12 PM',
                     title: 'Flutter Conference , Dart Analysis',
                     place: 'New York ,US 10010',
-                    price: '500',
+                    feedback: 'Feedback',
                   ),
                 ]),
               ),
@@ -63,8 +63,12 @@ class _MyeventsState extends State<Myevents> {
     );
   }
 
-  Widget event(
-      {String picName, String date, String title, String place, String price}) {
+  Widget pastevent(
+      {String picName,
+      String date,
+      String title,
+      String place,
+      String feedback}) {
     return Container(
         clipBehavior: Clip.hardEdge,
         decoration:
@@ -172,9 +176,9 @@ class _MyeventsState extends State<Myevents> {
                                   height: 47,
                                   child: FlatButton(
                                     child: Text(
-                                      "\$ $price",
+                                      " Feedback",
                                       style: TextStyle(
-                                          fontSize: 13, color: Colors.white),
+                                          fontSize: 18, color: Colors.white),
                                     ),
                                     color: Colors.black,
                                     onPressed: () {},
